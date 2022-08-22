@@ -1,0 +1,49 @@
+drop table if exists employee;
+drop table if exists account;
+drop table if exists customer;
+drop table if exists checkingAccont;
+drop table if exists savingsAccount;
+drop table if exists savingAccount;
+drop table if exists user;
+
+
+
+
+
+CREATE TABLE IF NOT EXISTS checkingAccount(
+    accNumber int primary key auto_increment,
+    custName char(100) not null,
+    email char(32) not null UNIQUE,
+    password char(32) not null,
+    deposit double(10,2) not null default 0.00,
+    balance double(10,2) not null default 0.00,
+    approved int default 0
+
+
+);
+
+
+CREATE TABLE IF NOT EXISTS savingAccount(
+    accNumber int primary key auto_increment,
+    custName char(100) not null,
+    email char(32) not null UNIQUE,
+    password char(32) not null,
+    deposit double(10,2) not null default 0.00,
+    balance double(10,2) not null default 0.00,
+    approved int default 0
+
+);
+
+
+create table if not exists employee(
+    id int primary key auto_increment,
+    Ename char(100) not null,
+    email char(32) not null UNIQUE,
+    password char(32) not null
+
+);
+
+
+
+
+
